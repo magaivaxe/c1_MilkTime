@@ -47,6 +47,12 @@ public class Boire
     {
         this.qualite = qualite;
     }
+
+    @Override
+    public String toString()
+    {
+        return "Boire{" + "debut=" + debut + ", qualite=" + qualite + '}';
+    }
     
     
     

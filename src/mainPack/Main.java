@@ -33,8 +33,21 @@ public class Main
         double quantML = 55;
         Biberon biberon = new Biberon(quantML, debut, Boire.Qualite.BON);
         
+        Boire boire = new Boire(debut, Boire.Qualite.MOYEN);
+        
         System.out.println(tetee);
         System.out.println(biberon);
+        System.out.println(boire);
+        
+        tetee.setSein(Tetee.Sein.GAUCHE);
+        tetee.setQualite(Boire.Qualite.BON);
+        biberon.setQuantite(80);
+        biberon.setDebut(new Date(10000));
+        
+        System.out.println(tetee);
+        System.out.println(biberon);
+        System.out.println(boire);
+        
     }
     
 }
