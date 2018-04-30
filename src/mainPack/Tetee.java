@@ -14,8 +14,9 @@ public class Tetee extends Boire
 	private Date fin;
 	private Sein sein;
 
-    public Tetee(Date fin, Sein sein, Date debut, Qualite qualite)
+    public Tetee(Date debut, Qualite qualite, Date fin, Sein sein)
     {
+        // Equal to setDebut(debut), setQualite(qualite), ctrl + space = shortcut to constructors 
         super(debut, qualite);
         this.fin = fin;
         this.sein = sein;
@@ -40,7 +41,7 @@ public class Tetee extends Boire
 
     public long getDuree()
     {
-            return (fin.getTime() - super.getDebut().getTime())/(1000*60);
+            return (fin.getTime() - getDebut().getTime())/(1000*60);
     }
 
     @Override
