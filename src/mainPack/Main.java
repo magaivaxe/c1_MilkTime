@@ -5,19 +5,36 @@
  */
 package mainPack;
 
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
 /**
  *
  * @author mpgsa
  */
 public class Main
 {
-
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args)
     {
+        Calendar c = new GregorianCalendar();
+        c.set(2018, Calendar.APRIL, 6, 10, 55, 0);
+        Date debut = c.getTime();
         
+        c.set(2018, Calendar.APRIL, 6, 11, 2, 0);
+        Date fin = c.getTime();
+        
+        Tetee tetee = new Tetee(
+                debut, Boire.Qualite.MAUVAIS, fin, Tetee.Sein.DROIT);
+        
+        double quantML = 55;
+        Biberon biberon = new Biberon(quantML, debut, Boire.Qualite.BON);
+        
+        System.out.println(tetee);
+        System.out.println(biberon);
     }
     
 }

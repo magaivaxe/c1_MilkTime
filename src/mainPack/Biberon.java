@@ -13,7 +13,11 @@ import java.util.Date;
  */
 public class Biberon extends Boire
 {
-    double quantite;
+    private double quantite;
+
+    public Biberon()
+    {
+    }
 
     public Biberon(double quantite, Date debut, Qualite qualite)
     {
@@ -29,6 +33,12 @@ public class Biberon extends Boire
     public void setQuantite(double quantite)
     {
         this.quantite = quantite;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Biberon{" + "quantite=" + quantite + '}';
     }
     
     
